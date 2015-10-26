@@ -41,8 +41,6 @@ endfunction
 
 function! s:GenerateSessionName(cwd)
 	let escaped_cwd = substitute(a:cwd, "/", "%", "g")
-	echom g:project_temporary_filename
-	echom escaped_cwd
 	return substitute(g:project_temporary_filename, "%s", escaped_cwd, "g")
 endfunction
 
